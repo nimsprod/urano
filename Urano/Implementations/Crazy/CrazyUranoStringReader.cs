@@ -2,10 +2,17 @@
 {
     public class CrazyUranoStringReader : IStringReader
     {
+        public CrazyUranoStringReader()
+        { 
+        
+        }
+
         public string ReadNumber(int number)
         {
+            var standarUranoStringReader = new Standard.UranoStringReader();
+
             var rand = new Random();
-            return rand.Next(100).ToString();
+            return rand.Next(100).ToString() + "---" + standarUranoStringReader.ReadNumber(number);
         }
     }
 }
