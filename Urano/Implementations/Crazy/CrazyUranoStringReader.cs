@@ -9,7 +9,7 @@
 
         public string ReadNumber(int number)
         {
-            var standarUranoStringReader = new Standard.UranoStringReader();
+            IStringReader standarUranoStringReader = new Standard.UranoStringReader();           
 
             var rand = new Random();
             return rand.Next(100).ToString() + "---" + standarUranoStringReader.ReadNumber(number);
